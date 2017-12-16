@@ -28,7 +28,7 @@ class App extends Component {
 		evt.preventDefault();
 		let s = this.state;
 		let 참가인원 = s.인원;
-		let 예상순수익 = s.시급 * s.시간 + s.준비시급 * s.준비시간;
+		let 예상순수익 = s.시간 * s.시급 + s.준비시간 * s.준비시급;
 		let 일인당원가 = 0;
 		let 단체원가 = 0;
 		if (s.is단체재료비) {
@@ -59,6 +59,7 @@ class App extends Component {
 	}
 
 	render() {
+		console.log(this.state.시간);
 		return (
 			<div className="container pt-1">
 				<h1 className="display-4">청구 비용 / 원가 계산기</h1>
@@ -97,7 +98,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">업무 총 시간</label>
-								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="업무 총 시간" onInput={evt => this.setState({ 시간: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="업무 총 시간" onInput={evt => this.setState({ 시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
 							</div>
 						</div>
 					</div>
@@ -105,7 +106,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">준비 시간</label>
-								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseFloat(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
 							</div>
 						</div>
 					</div>
