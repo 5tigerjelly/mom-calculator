@@ -59,7 +59,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log(this.state.시간);
 		return (
 			<div className="container pt-1">
 				<h1 className="display-4">청구 비용 / 원가 계산기</h1>
@@ -68,7 +67,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputEmail1">시급</label>
-								<input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="시급" onInput={evt => this.setState({ 시급: parseInt(evt.target.value ? evt.target.value : 0, 10) })
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="시급" onInput={evt => this.setState({ 시급: parseInt(evt.target.value ? evt.target.value : 0, 10) })
 
 								} />
 							</div>
@@ -78,7 +77,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputEmail1">준비 시급</label>
-								<input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="준비시급" onInput={evt => this.setState({ 준비시급: parseInt(evt.target.value ? evt.target.value : 0, 10) })
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="준비시급" onInput={evt => this.setState({ 준비시급: parseInt(evt.target.value ? evt.target.value : 0, 10) })
 
 								} />
 							</div>
@@ -88,7 +87,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputEmail1">참가자 인원</label>
-								<input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="참가자 인원" onInput={evt => this.setState({ 인원: parseInt(evt.target.value ? evt.target.value : 0, 10) })
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="참가자 인원" onInput={evt => this.setState({ 인원: parseInt(evt.target.value ? evt.target.value : 0, 10) })
 
 								} />
 							</div>
@@ -98,7 +97,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">업무 총 시간</label>
-								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="업무 총 시간" onInput={evt => this.setState({ 시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
+								<input type="text" pattern="\d*" step="any" className="form-control" id="exampleInputPassword1" placeholder="업무 총 시간" onInput={evt => this.setState({ 시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
 							</div>
 						</div>
 					</div>
@@ -106,7 +105,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">준비 시간</label>
-								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
+								<input type="text" pattern="\d*" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseFloat(evt.target.value ? evt.target.value : 0) })} />
 							</div>
 						</div>
 					</div>
@@ -114,7 +113,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">재료비</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="재료비" onInput={evt => this.setState({ 재료비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="재료비" onInput={evt => this.setState({ 재료비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 							<div className="form-check">
 								<label className="form-check-label">
@@ -128,7 +127,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">물감재료비</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="물감재료비" onInput={evt => this.setState({ 물감재료비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="물감재료비" onInput={evt => this.setState({ 물감재료비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 							<div className="form-check">
 								<label className="form-check-label">
@@ -142,7 +141,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">보조재</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="보조재" onInput={evt => this.setState({ 보조재: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="보조재" onInput={evt => this.setState({ 보조재: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -150,7 +149,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">붓</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="붓" onInput={evt => this.setState({ 붓: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="붓" onInput={evt => this.setState({ 붓: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -158,7 +157,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">배송료</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="배송료" onInput={evt => this.setState({ 배송료: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="배송료" onInput={evt => this.setState({ 배송료: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -166,7 +165,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">보조강사비</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="보조강사비" onInput={evt => this.setState({ 보조강사비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="보조강사비" onInput={evt => this.setState({ 보조강사비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -174,7 +173,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">교통비</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="교통비" onInput={evt => this.setState({ 교통비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="교통비" onInput={evt => this.setState({ 교통비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -182,7 +181,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">식비</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="식비" onInput={evt => this.setState({ 식비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="식비" onInput={evt => this.setState({ 식비: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
@@ -190,7 +189,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">홍보비용</label>
-								<input type="number" className="form-control" id="exampleInputPassword1" placeholder="홍보비용" onInput={evt => this.setState({ 홍보비용: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="text" pattern="\d*" className="form-control" id="exampleInputPassword1" placeholder="홍보비용" onInput={evt => this.setState({ 홍보비용: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
