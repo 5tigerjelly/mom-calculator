@@ -105,7 +105,7 @@ class App extends Component {
 						<div className="card-block">
 							<div className="form-group">
 								<label htmlFor="exampleInputPassword1">준비 시간</label>
-								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseInt(evt.target.value ? evt.target.value : 0, 10) })} />
+								<input type="number" step="any" className="form-control" id="exampleInputPassword1" placeholder="준비 시간" onInput={evt => this.setState({ 준비시간: parseFloat(evt.target.value ? evt.target.value : 0, 10) })} />
 							</div>
 						</div>
 					</div>
